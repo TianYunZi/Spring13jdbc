@@ -7,5 +7,11 @@
       <schema-pattern>gisprinciple.*</schema-pattern>
       <default-schemas>gisprinciple.*</default-schemas>
     </data-source>
+    <data-source name="MySQL - spring@localhost" uuid="b5810552-83f7-4a33-a8eb-6a6d71157cb3">
+      <secret-storage>master_key</secret-storage>
+      <user-name>root</user-name>
+      <schema-pattern>spring.*</schema-pattern>
+      <default-schemas>spring.*</default-schemas>
+    </data-source>
   </component>
 </project>

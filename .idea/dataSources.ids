@@ -91,4 +91,53 @@
       </foreign-key>
     </database-model>
   </data-source>
+  <data-source name="MySQL - spring@localhost" uuid="b5810552-83f7-4a33-a8eb-6a6d71157cb3">
+    <database-info product="MySQL" version="5.7.9-log" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower"/>
+    <database-model serializer="dbm" rdbms="MYSQL" format-version="2.5">
+      <schema id="1" name="spring"/>
+      <table id="2" parent="1" name="account"/>
+      <table id="3" parent="1" name="book"/>
+      <table id="4" parent="1" name="book_stock"/>
+      <column id="5" parent="2" name="username">
+        <mandatory>1</mandatory>
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="6" parent="2" name="balance">
+        <data-type>int(11)</data-type>
+      </column>
+      <key id="7" parent="2" name="PRIMARY">
+        <columns>username</columns>
+        <primary>1</primary>
+      </key>
+      <column id="8" parent="3" name="isbn">
+        <mandatory>1</mandatory>
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="9" parent="3" name="book_name">
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="10" parent="3" name="price">
+        <data-type>int(11)</data-type>
+      </column>
+      <key id="11" parent="3" name="PRIMARY">
+        <columns>isbn</columns>
+        <primary>1</primary>
+      </key>
+      <column id="12" parent="4" name="isbn">
+        <mandatory>1</mandatory>
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="13" parent="4" name="stock">
+        <data-type>int(11)</data-type>
+      </column>
+      <key id="14" parent="4" name="PRIMARY">
+        <columns>isbn</columns>
+        <primary>1</primary>
+      </key>
+    </database-model>
+  </data-source>
 </component>
